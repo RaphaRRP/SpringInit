@@ -1,0 +1,19 @@
+ -baixar e configurar o maven "https://maven.apache.org/download.cgi"(ja ter o java)
+ -comando conf. "java -version" | "mvn -version"
+
+ -criar um projeto spring boot pelo site "https://start.spring.io/"
+
+ -no terminal do projeto executar "mvn clean install" para instalar as dependencias
+
+ -instalar o PostgreSQL/pgAdmin4 "https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" e criar um banco novo
+
+ -no arquivo "src\main\resources\application.properties" configurar a conexão do banco com o seguinte código:
+
+	"spring.datasource.url= jdbc:postgresql://localhost:5432/<nome_do_seu_banco>
+	 spring.datasource.username=postgres
+ 	 spring.datasource.password=<sua_senha>
+ 	 spring.jpa.hibernate.ddl-auto=update
+
+  	 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true"
+
+-rodar o "src\main\java\com\eapi\parking\control\Application.java" e abrir o browser em "http://localhost:8080/"
